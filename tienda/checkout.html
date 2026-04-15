@@ -1,0 +1,160 @@
+﻿<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Checkout | MiFarmacia</title>
+    <link rel="stylesheet" href="style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700&family=Work+Sans:wght@400;600;700&display=swap" rel="stylesheet" />
+  </head>
+  <body>
+    <div class="announcement-bar">
+      <div class="container announcement-inner">
+        <div>Último paso para confirmar tu compra.</div>
+        <div class="announcement-meta">
+          <span>Datos protegidos</span>
+          <span>Pedido confirmado al instante</span>
+          <span>Atención disponible</span>
+        </div>
+      </div>
+    </div>
+
+    <header class="retail-header">
+      <div class="retail-top container">
+        <a class="brand" href="index.html">
+          <span class="brand-mark"><img src="../assets/branding/logo-transparent.png" alt="Farmacias Gaital" class="brand-logo-store"></span>
+          <span class="brand-note">Checkout claro, rápido y seguro</span>
+        </a>
+        <div class="search-wrap">
+          <div class="search-bar">
+            <input type="text" placeholder="¿Qué estás buscando?" />
+            <button class="search-btn">Buscar</button>
+          </div>
+          <div class="search-suggest" hidden></div>
+        </div>
+        <div class="retail-icons">
+          <div class="retail-help">
+            <span>Delivery Recetario</span>
+            <strong>(507) 6815-1053</strong>
+          </div>
+          <a class="icon-link" href="login.html" data-store-auth>
+            <svg viewBox="0 0 24 24" fill="none" stroke-width="2">
+              <circle cx="12" cy="8" r="4"></circle>
+              <path d="M4 20c1.8-3.5 5-5 8-5s6.2 1.5 8 5"></path>
+            </svg>
+            Ingresar
+          </a>
+          <a class="icon-link" href="carrito.html">
+            <svg viewBox="0 0 24 24" fill="none" stroke-width="2">
+              <circle cx="9" cy="20" r="1.8"></circle>
+              <circle cx="17" cy="20" r="1.8"></circle>
+              <path d="M3 4h2l2.6 11.5a1 1 0 0 0 1 .8h8.8a1 1 0 0 0 1-.7L21 7H6"></path>
+            </svg>
+            Carrito (<span class="cart-badge" data-cart-badge>0</span>)
+          </a>
+        </div>
+      </div>
+      <div class="retail-subnav">
+        <div class="container subnav-links">
+          <a href="catalogo.html">Departamentos</a>
+          <a href="catalogo.html">Catálogo</a>
+          <a href="servicios.html">Servicios</a>
+          <a href="contacto.html">Atención</a>
+          <a href="mis-pedidos.html">Mis pedidos</a>
+        </div>
+      </div>
+    </header>
+
+    <section class="section">
+      <div class="container">
+        <div class="section-header">
+          <div class="section-copy">
+            <span class="eyebrow">Confirmación</span>
+            <h2 class="section-title">Finalizar compra</h2>
+            <p class="small">Completa tus datos de entrega y confirma el método de pago.</p>
+          </div>
+        </div>
+        <div class="grid checkout-shell" style="grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 20px;">
+          <form class="card checkout-form" data-checkout-form>
+            <h3>Datos de envío</h3>
+            <div class="checkout-grid">
+              <input class="input" id="checkout-nombre" placeholder="Nombre" required />
+              <input class="input" id="checkout-apellido" placeholder="Apellido" required />
+              <input class="input" id="checkout-telefono" placeholder="Teléfono" required />
+              <input class="input" id="checkout-email" placeholder="Email (opcional)" type="email" />
+              <input class="input" id="checkout-direccion" placeholder="Dirección" required />
+              <input class="input" id="checkout-ciudad" placeholder="Ciudad" required />
+              <select class="input" id="checkout-metodo" required>
+                <option value="efectivo">Efectivo</option>
+                <option value="tarjeta">Tarjeta</option>
+                <option value="transferencia">Transferencia</option>
+              </select>
+              <input class="input" id="checkout-notas" placeholder="Notas (opcional)" />
+            </div>
+            <div class="checkout-feedback" data-checkout-feedback></div>
+            <button class="btn" style="margin-top: 16px;" type="submit" data-checkout-submit>Confirmar pedido</button>
+          </form>
+          <div class="cart-summary">
+            <div><strong>Total a pagar:</strong> <span data-checkout-total>$0.00</span></div>
+            <div class="checkout-items" data-checkout-items></div>
+            <div class="small">Pago seguro con tarjeta o transferencia.</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <footer class="footer">
+      <div class="container footer-panel">
+        <div class="footer-top">
+          <div class="footer-brand">
+            <img src="../assets/branding/logo-transparent.png" alt="Farmacias Gaital" class="footer-brand-logo">
+            <p>Tu farmacia digital con atenci&oacute;n cercana, compra segura y acompa&ntilde;amiento durante todo el proceso.</p>
+          </div>
+
+          <div>
+            <h3 class="footer-title">Cont&aacute;ctanos</h3>
+            <ul class="footer-contact">
+              <li>Ll&aacute;manos: (507) 6815-1053</li>
+              <li>Email: clientes@farmaciasgaital.com</li>
+              <li>WhatsApp: atenci&oacute;n y recetario</li>
+            </ul>
+          </div>
+
+          <div>
+            <h3 class="footer-title">Servicios</h3>
+            <ul class="footer-list">
+              <li><a href="servicios.html">Servicios para el cliente</a></li>
+              <li><a href="contacto.html">Centro de ayuda</a></li>
+              <li><a href="contacto.html">Pol&iacute;tica de privacidad</a></li>
+              <li><a href="mis-pedidos.html">Seguimiento de pedidos</a></li>
+            </ul>
+          </div>
+
+          <div>
+            <h3 class="footer-title">Cuenta y sitio</h3>
+            <ul class="footer-list">
+              <li><a href="login.html">Ingresar</a></li>
+              <li><a href="catalogo.html">Cat&aacute;logo</a></li>
+              <li><a href="contacto.html">Sucursales y horarios</a></li>
+              <li><a href="contacto.html">Trabaja con nosotros</a></li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="footer-bottom">
+          <strong>Todos los derechos reservados Farmacias Gaital &copy; 2026</strong>
+          <div class="footer-apps">
+            <span class="footer-app-badge">Recetario digital</span>
+            <span class="footer-app-badge">Entrega el mismo dia</span>
+            <span class="footer-app-badge">Atencion por WhatsApp</span>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    <script src="script.js"></script>
+  </body>
+</html>
+

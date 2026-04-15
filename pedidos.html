@@ -1,0 +1,155 @@
+﻿<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Pedidos - MiFarmacia</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="app-root">
+      <!-- SIDEBAR -->
+      <aside class="sidebar">
+        <div class="brand">
+          <div>
+            <span class="brand-kicker">Panel</span>
+            <img src="assets/branding/logo-transparent.png" alt="Farmacias Gaital" class="brand-logo">
+          </div>
+          <button id="collapse-btn" type="button" aria-label="Colapsar barra lateral">⏴</button>
+        </div>
+        <nav class="main-nav">
+          <ul>
+            <li><a href="index.html"><span class="link-text">Tablero</span></a></li>
+            <li><a href="productos.html"><span class="link-text">Productos</span></a></li>
+            <li><a href="pedidos.html" class="active"><span class="link-text">Pedidos</span></a></li>
+            <li><a href="clientes.html"><span class="link-text">Clientes</span></a></li>
+            <li><a href="reportes.html"><span class="link-text">Reportes</span></a></li>
+          </ul>
+        </nav>
+      </aside>
+
+      <!-- CONTENIDO -->
+      <div class="content-root">
+        <!-- TOPBAR -->
+        <header class="topbar">
+          <div class="topbar-left"></div>
+
+          <div class="search-wrapper">
+            <form id="search-form">
+              <input type="text" placeholder="Buscar pedido..." />
+              <button type="submit">Buscar</button>
+            </form>
+          </div>
+
+          <div class="topbar-right">
+            <div class="user-dropdown">
+              <img src="https://cdn-icons-png.flaticon.com/512/219/219983.png" alt="Usuario" />
+              <span class="user-name">Mateo Dominguez</span>
+              <button id="user-menu-btn" type="button" aria-label="Abrir menú de usuario">▼</button>
+              <ul class="user-menu">
+                <li><a href="perfil.html">Perfil</a></li>
+                <li><a href="ajustes.html">Ajustes</a></li>
+                <li><a href="#" class="logout-link">Cerrar sesión</a></li>
+              </ul>
+            </div>
+          </div>
+        </header>
+
+        <!-- MAIN -->
+        <main class="main">
+          <div class="page-intro page-intro-compact">
+            <div>
+              <span class="eyebrow">Ventas</span>
+              <h1>Gestión de Pedidos</h1>
+              <p>Consulta estados, filtra por fecha y registra nuevas órdenes manuales.</p>
+            </div>
+          </div>
+
+          <div class="card">
+            <div class="section-actions">
+              <div>
+                <h2>Órdenes registradas</h2>
+                <p>Controla el estado comercial y crea nuevos pedidos desde una vista dedicada.</p>
+              </div>
+              <button type="button" class="btn btn-primary js-open-modal" data-modal-target="modal-pedido">Agregar pedido</button>
+            </div>
+
+            <div class="filters">
+              <select id="filtro-estado">
+                <option value="todos">Todos los estados</option>
+                <option value="pendiente">Pendiente</option>
+                <option value="procesando">Procesando</option>
+                <option value="enviado">Enviado</option>
+                <option value="entregado">Entregado</option>
+                <option value="cancelado">Cancelado</option>
+              </select>
+              <input type="date" id="filtro-fecha" />
+              <button id="btn-cargar-pedidos" class="btn">Actualizar pedidos</button>
+            </div>
+
+            <table id="pedidos-table">
+              <thead>
+                <tr>
+                  <th>ID</th>
+                  <th>Cliente</th>
+                  <th>Fecha</th>
+                  <th>Estado</th>
+                  <th>Total</th>
+                  <th>Método</th>
+                  <th>Acciones</th>
+                </tr>
+              </thead>
+              <tbody></tbody>
+            </table>
+          </div>
+
+          <div id="modal-pedido" class="modal-overlay" aria-hidden="true">
+            <div class="modal-card">
+              <div class="modal-head">
+                <div>
+                  <span class="eyebrow">Ventas</span>
+                  <h2>Agregar pedido</h2>
+                </div>
+                <button type="button" class="modal-close js-close-modal" aria-label="Cerrar">×</button>
+              </div>
+              <form id="pedidoForm">
+                <input type="text" id="pedido_cliente" placeholder="Cliente" required />
+                <input type="date" id="pedido_fecha" required />
+                <select id="pedido_estado" required>
+                  <option value="pendiente">Pendiente</option>
+                  <option value="procesando">Procesando</option>
+                  <option value="enviado">Enviado</option>
+                  <option value="entregado">Entregado</option>
+                  <option value="cancelado">Cancelado</option>
+                </select>
+                <input type="number" id="pedido_total" placeholder="Total" step="0.01" required />
+                <select id="pedido_metodo" required>
+                  <option value="efectivo">Efectivo</option>
+                  <option value="tarjeta">Tarjeta</option>
+                  <option value="transferencia">Transferencia</option>
+                </select>
+                <input type="text" id="pedido_notas" placeholder="Notas (opcional)" />
+                <button type="submit" class="btn">Guardar pedido</button>
+              </form>
+            </div>
+          </div>
+        </main>
+
+        <!-- FOOTER -->
+        <footer class="site-footer">
+          <span>© 2025 MiFarmacia. Todos los derechos reservados.</span>
+          <ul>
+            <li><a href="#">Política de privacidad</a></li>
+            <li><a href="#">Términos</a></li>
+          </ul>
+        </footer>
+      </div>
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>
+

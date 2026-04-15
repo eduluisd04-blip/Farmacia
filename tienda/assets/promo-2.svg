@@ -1,0 +1,16 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1600" height="500" viewBox="0 0 1600 500">
+  <defs>
+    <linearGradient id="g2" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#0ea5a8"/>
+      <stop offset="100%" stop-color="#0f766e"/>
+    </linearGradient>
+  </defs>
+  <rect width="1600" height="500" fill="url(#g2)"/>
+  <rect x="980" y="70" width="500" height="360" rx="24" fill="#34d399" opacity="0.28"/>
+  <text x="120" y="165" font-family="Arial, sans-serif" font-size="50" fill="#d1fae5" font-weight="700">TEMPORADA SALUDABLE</text>
+  <text x="120" y="250" font-family="Arial, sans-serif" font-size="82" fill="#ffffff" font-weight="800">VITAMINAS</text>
+  <text x="120" y="325" font-family="Arial, sans-serif" font-size="58" fill="#ffffff" font-weight="800">2X1</text>
+  <text x="290" y="325" font-family="Arial, sans-serif" font-size="38" fill="#ecfeff" font-weight="700">EN PRODUCTOS SELECTOS</text>
+  <rect x="120" y="352" width="410" height="62" rx="14" fill="#fef3c7"/>
+  <text x="145" y="392" font-family="Arial, sans-serif" font-size="32" fill="#1f2937" font-weight="800">ENVIO GRATIS HOY</text>
+</svg>

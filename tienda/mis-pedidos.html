@@ -1,0 +1,132 @@
+﻿<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Mis Pedidos | MiFarmacia</title>
+    <link rel="stylesheet" href="style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700&family=Work+Sans:wght@400;600;700&display=swap" rel="stylesheet" />
+  </head>
+  <body>
+    <div class="announcement-bar">
+      <div class="container announcement-inner">
+        <div>Consulta el estado de tus compras en un solo lugar.</div>
+        <div class="announcement-meta">
+          <span>Historial</span>
+          <span>Detalle</span>
+          <span>Seguimiento</span>
+        </div>
+      </div>
+    </div>
+
+    <header class="retail-header">
+      <div class="retail-top container">
+        <a class="brand" href="index.html">
+          <span class="brand-mark"><img src="../assets/branding/logo-transparent.png" alt="Farmacias Gaital" class="brand-logo-store"></span>
+          <span class="brand-note">Historial y seguimiento de pedidos</span>
+        </a>
+        <div class="search-wrap">
+          <div class="search-bar">
+            <input type="text" placeholder="¿Qué estás buscando?" />
+            <button class="search-btn">Buscar</button>
+          </div>
+          <div class="search-suggest" hidden></div>
+        </div>
+        <div class="retail-icons">
+          <div class="retail-help">
+            <span>Delivery Recetario</span>
+            <strong>(507) 6815-1053</strong>
+          </div>
+          <a class="icon-link" href="login.html" data-store-auth>Ingresar</a>
+          <a class="icon-link" href="carrito.html">Carrito (<span class="cart-badge" data-cart-badge>0</span>)</a>
+        </div>
+      </div>
+      <div class="retail-subnav">
+        <div class="container subnav-links">
+          <a href="catalogo.html">Departamentos</a>
+          <a href="catalogo.html">Catálogo</a>
+          <a href="servicios.html">Servicios</a>
+          <a href="contacto.html">Atención</a>
+          <a href="mis-pedidos.html" class="active-link">Mis pedidos</a>
+        </div>
+      </div>
+    </header>
+
+    <section class="section">
+      <div class="container">
+        <div class="section-header">
+          <div class="section-copy">
+            <span class="eyebrow">Seguimiento</span>
+            <h2 class="section-title">Mis pedidos</h2>
+            <p class="small">Consulta pedidos por teléfono o correo y revisa su detalle completo.</p>
+          </div>
+        </div>
+        <div class="content-shell">
+          <form class="card" data-orders-filter>
+            <h3>Buscar pedidos</h3>
+            <div class="checkout-grid">
+              <input class="input" id="orders-telefono" placeholder="Teléfono" />
+              <input class="input" id="orders-email" placeholder="Email" />
+            </div>
+            <button class="btn" style="margin-top: 12px;" type="submit">Buscar</button>
+          </form>
+          <div class="grid" style="margin-top: 16px;" data-orders-list></div>
+        </div>
+      </div>
+    </section>
+
+    <footer class="footer">
+      <div class="container footer-panel">
+        <div class="footer-top">
+          <div class="footer-brand">
+            <img src="../assets/branding/logo-transparent.png" alt="Farmacias Gaital" class="footer-brand-logo">
+            <p>Tu farmacia digital con atenci&oacute;n cercana, compra segura y acompa&ntilde;amiento durante todo el proceso.</p>
+          </div>
+
+          <div>
+            <h3 class="footer-title">Cont&aacute;ctanos</h3>
+            <ul class="footer-contact">
+              <li>Ll&aacute;manos: (507) 6815-1053</li>
+              <li>Email: clientes@farmaciasgaital.com</li>
+              <li>WhatsApp: atenci&oacute;n y recetario</li>
+            </ul>
+          </div>
+
+          <div>
+            <h3 class="footer-title">Servicios</h3>
+            <ul class="footer-list">
+              <li><a href="servicios.html">Servicios para el cliente</a></li>
+              <li><a href="contacto.html">Centro de ayuda</a></li>
+              <li><a href="contacto.html">Pol&iacute;tica de privacidad</a></li>
+              <li><a href="mis-pedidos.html">Seguimiento de pedidos</a></li>
+            </ul>
+          </div>
+
+          <div>
+            <h3 class="footer-title">Cuenta y sitio</h3>
+            <ul class="footer-list">
+              <li><a href="login.html">Ingresar</a></li>
+              <li><a href="catalogo.html">Cat&aacute;logo</a></li>
+              <li><a href="contacto.html">Sucursales y horarios</a></li>
+              <li><a href="contacto.html">Trabaja con nosotros</a></li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="footer-bottom">
+          <strong>Todos los derechos reservados Farmacias Gaital &copy; 2026</strong>
+          <div class="footer-apps">
+            <span class="footer-app-badge">Recetario digital</span>
+            <span class="footer-app-badge">Entrega el mismo dia</span>
+            <span class="footer-app-badge">Atencion por WhatsApp</span>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    <script src="script.js"></script>
+  </body>
+</html>
+

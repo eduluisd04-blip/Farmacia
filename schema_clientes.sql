@@ -1,0 +1,16 @@
+﻿CREATE DATABASE IF NOT EXISTS farmacia_db;
+USE farmacia_db;
+
+CREATE TABLE IF NOT EXISTS clientes (
+  id INT AUTO_INCREMENT PRIMARY KEY,
+  nombre VARCHAR(100) NOT NULL,
+  apellido VARCHAR(100) NOT NULL,
+  telefono VARCHAR(30) NULL,
+  email VARCHAR(120) NULL,
+  direccion VARCHAR(200) NULL,
+  ciudad VARCHAR(100) NULL,
+  estado VARCHAR(100) NULL,
+  codigo_postal VARCHAR(20) NULL,
+  activo TINYINT(1) NOT NULL DEFAULT 1,
+  fecha_registro TIMESTAMP NOT NULL DEFAULT CURRENT_TIMESTAMP
+);

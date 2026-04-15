@@ -1,0 +1,109 @@
+﻿<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Agregar Pedido - MiFarmacia</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="app-root">
+      <aside class="sidebar">
+        <div class="brand">
+          <div>
+            <span class="brand-kicker">Panel</span>
+            <img src="assets/branding/logo-transparent.png" alt="Farmacias Gaital" class="brand-logo">
+          </div>
+          <button id="collapse-btn" type="button" aria-label="Colapsar barra lateral">â´</button>
+        </div>
+        <nav class="main-nav">
+          <ul>
+            <li><a href="index.html"><span class="link-text">Tablero</span></a></li>
+            <li><a href="productos.html"><span class="link-text">Productos</span></a></li>
+            <li><a href="pedidos.html" class="active"><span class="link-text">Pedidos</span></a></li>
+            <li><a href="clientes.html"><span class="link-text">Clientes</span></a></li>
+            <li><a href="reportes.html"><span class="link-text">Reportes</span></a></li>
+          </ul>
+        </nav>
+      </aside>
+
+      <div class="content-root">
+        <header class="topbar">
+          <div class="topbar-left"></div>
+          <div class="search-wrapper">
+            <form id="search-form">
+              <input type="text" placeholder="Buscar pedido..." />
+              <button type="submit">Buscar</button>
+            </form>
+          </div>
+          <div class="topbar-right">
+            <div class="user-dropdown">
+              <img src="https://cdn-icons-png.flaticon.com/512/219/219983.png" alt="Usuario" />
+              <span class="user-name">Mateo Dominguez</span>
+              <button id="user-menu-btn" type="button" aria-label="Abrir menÃº de usuario">â–¼</button>
+              <ul class="user-menu">
+                <li><a href="perfil.html">Perfil</a></li>
+                <li><a href="ajustes.html">Ajustes</a></li>
+                <li><a href="#" class="logout-link">Cerrar sesiÃ³n</a></li>
+              </ul>
+            </div>
+          </div>
+        </header>
+
+        <main class="main">
+          <div class="page-intro page-intro-compact">
+            <div>
+              <span class="eyebrow">Ventas</span>
+              <h1>Agregar Pedido</h1>
+              <p>Registra Ã³rdenes manuales en una ventana separada para mantener el flujo del panel mÃ¡s claro.</p>
+            </div>
+            <a href="pedidos.html" class="btn">Volver a pedidos</a>
+          </div>
+
+          <section class="card standalone-form-card">
+            <div class="section-actions">
+              <div>
+                <h2>Datos del pedido</h2>
+                <p>Completa la informaciÃ³n principal del cliente, estado, total y mÃ©todo de pago.</p>
+              </div>
+            </div>
+
+            <form id="pedidoForm" class="standalone-form">
+              <input type="text" id="pedido_cliente" placeholder="Cliente" required />
+              <input type="date" id="pedido_fecha" required />
+              <select id="pedido_estado" required>
+                <option value="pendiente">Pendiente</option>
+                <option value="procesando">Procesando</option>
+                <option value="enviado">Enviado</option>
+                <option value="entregado">Entregado</option>
+                <option value="cancelado">Cancelado</option>
+              </select>
+              <input type="number" id="pedido_total" placeholder="Total" step="0.01" required />
+              <select id="pedido_metodo" required>
+                <option value="efectivo">Efectivo</option>
+                <option value="tarjeta">Tarjeta</option>
+                <option value="transferencia">Transferencia</option>
+              </select>
+              <input type="text" id="pedido_notas" placeholder="Notas (opcional)" />
+              <button type="submit" class="btn">Guardar pedido</button>
+            </form>
+          </section>
+        </main>
+
+        <footer class="site-footer">
+          <span>Â© 2025 MiFarmacia. Todos los derechos reservados.</span>
+          <ul>
+            <li><a href="#">PolÃ­tica de privacidad</a></li>
+            <li><a href="#">TÃ©rminos</a></li>
+          </ul>
+        </footer>
+      </div>
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>
+

@@ -1,0 +1,73 @@
+﻿<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Perfil - MiFarmacia</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="app-root">
+      <aside class="sidebar">
+        <div class="brand">
+          <img src="assets/branding/logo-transparent.png" alt="Farmacias Gaital" class="brand-logo">
+          <button id="collapse-btn" type="button" aria-label="Colapsar barra lateral">⏴</button>
+        </div>
+        <nav class="main-nav">
+          <ul>
+            <li><a href="index.html">🏠 <span class="link-text">Tablero</span></a></li>
+            <li><a href="productos.html">📦 <span class="link-text">Productos</span></a></li>
+            <li><a href="pedidos.html">🧾 <span class="link-text">Pedidos</span></a></li>
+            <li><a href="clientes.html">👥 <span class="link-text">Clientes</span></a></li>
+          </ul>
+        </nav>
+      </aside>
+
+      <div class="content-root">
+        <header class="topbar">
+          <div class="topbar-left"></div>
+          <div class="search-wrapper"></div>
+          <div class="topbar-right">
+            <div class="user-dropdown">
+              <img src="https://cdn-icons-png.flaticon.com/512/219/219983.png" alt="Usuario" />
+              <span class="user-name">Usuario</span>
+              <button id="user-menu-btn" type="button" aria-label="Abrir menú de usuario">▼</button>
+              <ul class="user-menu">
+                <li><a href="perfil.html">Perfil</a></li>
+                <li><a href="ajustes.html">Ajustes</a></li>
+                <li><a href="#" class="logout-link">Cerrar sesión</a></li>
+              </ul>
+            </div>
+          </div>
+        </header>
+
+        <main class="main">
+          <section class="card">
+            <h2>Mi perfil</h2>
+            <p>Actualiza tu información personal.</p>
+
+            <form id="perfilForm" class="form-grid">
+              <input type="text" id="perfil_nombre" placeholder="Nombre" required />
+              <input type="text" id="perfil_apellido" placeholder="Apellido" required />
+              <input type="email" id="perfil_email" placeholder="Correo" />
+              <input type="text" id="perfil_telefono" placeholder="Teléfono" />
+              <input type="text" id="perfil_cargo" placeholder="Cargo" />
+              <button type="submit" class="btn">💾 Guardar cambios</button>
+            </form>
+          </section>
+        </main>
+
+        <footer class="site-footer">
+          <span>© 2025 MiFarmacia. Todos los derechos reservados.</span>
+          <ul>
+            <li><a href="#">Política de privacidad</a></li>
+            <li><a href="#">Términos</a></li>
+          </ul>
+        </footer>
+      </div>
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>
+

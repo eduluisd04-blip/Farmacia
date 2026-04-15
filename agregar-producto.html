@@ -1,0 +1,105 @@
+﻿<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Agregar Producto - MiFarmacia</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="app-root">
+      <aside class="sidebar">
+        <div class="brand">
+          <div>
+            <span class="brand-kicker">Panel</span>
+            <img src="assets/branding/logo-transparent.png" alt="Farmacias Gaital" class="brand-logo">
+          </div>
+          <button id="collapse-btn" type="button" aria-label="Colapsar barra lateral">â´</button>
+        </div>
+        <nav class="main-nav">
+          <ul>
+            <li><a href="index.html"><span class="link-text">Tablero</span></a></li>
+            <li><a href="productos.html" class="active"><span class="link-text">Productos</span></a></li>
+            <li><a href="pedidos.html"><span class="link-text">Pedidos</span></a></li>
+            <li><a href="clientes.html"><span class="link-text">Clientes</span></a></li>
+            <li><a href="reportes.html"><span class="link-text">Reportes</span></a></li>
+          </ul>
+        </nav>
+      </aside>
+
+      <div class="content-root">
+        <header class="topbar">
+          <div class="topbar-left"></div>
+          <div class="search-wrapper">
+            <form id="search-form">
+              <input type="text" placeholder="Buscar producto..." />
+              <button type="submit">Buscar</button>
+            </form>
+          </div>
+          <div class="topbar-right">
+            <div class="user-dropdown">
+              <img src="https://cdn-icons-png.flaticon.com/512/219/219983.png" alt="Usuario" />
+              <span class="user-name">Mateo Dominguez</span>
+              <button id="user-menu-btn" type="button" aria-label="Abrir menÃº de usuario">â–¼</button>
+              <ul class="user-menu">
+                <li><a href="perfil.html">Perfil</a></li>
+                <li><a href="ajustes.html">Ajustes</a></li>
+                <li><a href="#" class="logout-link">Cerrar sesiÃ³n</a></li>
+              </ul>
+            </div>
+          </div>
+        </header>
+
+        <main class="main">
+          <div class="page-intro page-intro-compact">
+            <div>
+              <span class="eyebrow">Inventario</span>
+              <h1>Agregar Producto</h1>
+              <p>Crea una referencia nueva en una vista dedicada, mÃ¡s limpia y lista para operar.</p>
+            </div>
+            <a href="productos.html" class="btn">Volver a productos</a>
+          </div>
+
+          <section class="card standalone-form-card">
+            <div class="section-actions">
+              <div>
+                <h2>Datos del producto</h2>
+                <p>Completa la informaciÃ³n comercial, el stock y la imagen que se mostrarÃ¡ en la tienda.</p>
+              </div>
+            </div>
+
+            <form id="productoForm" class="standalone-form">
+              <input type="text" id="nombre" placeholder="Nombre" required />
+              <input type="text" id="descripcion" placeholder="DescripciÃ³n" />
+              <input type="number" id="precio" placeholder="Precio" step="0.01" required />
+              <input type="number" id="cantidad" placeholder="Cantidad" required />
+              <input type="date" id="fecha_caducidad" />
+              <input type="text" id="categoria" placeholder="CategorÃ­a" />
+              <input type="text" id="proveedor" placeholder="Proveedor" />
+              <input type="text" id="imagen_url" placeholder="Imagen (URL o ruta local)" />
+              <input type="file" id="imagen_file" accept="image/*" />
+              <div class="image-preview-wrap">
+                <img id="imagen_preview" class="thumb-prod" alt="Vista previa" />
+              </div>
+              <button type="submit" class="btn">Guardar producto</button>
+            </form>
+          </section>
+        </main>
+
+        <footer class="site-footer">
+          <span>Â© 2025 MiFarmacia. Todos los derechos reservados.</span>
+          <ul>
+            <li><a href="#">PolÃ­tica de privacidad</a></li>
+            <li><a href="#">TÃ©rminos</a></li>
+          </ul>
+        </footer>
+      </div>
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>
+

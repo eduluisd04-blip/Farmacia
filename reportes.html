@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Reportes - MiFarmacia</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+  </head>
+  <body>
+    <div class="app-root">
+      <aside class="sidebar">
+        <div class="brand">
+          <div>
+            <span class="brand-kicker">Panel</span>
+            <img src="assets/branding/logo-transparent.png" alt="Farmacias Gaital" class="brand-logo">
+          </div>
+          <button id="collapse-btn" type="button" aria-label="Colapsar barra lateral">⏴</button>
+        </div>
+
+        <nav class="main-nav">
+          <ul>
+            <li><a href="index.html"><span class="link-text">Tablero</span></a></li>
+            <li><a href="productos.html"><span class="link-text">Productos</span></a></li>
+            <li><a href="pedidos.html"><span class="link-text">Pedidos</span></a></li>
+            <li><a href="clientes.html"><span class="link-text">Clientes</span></a></li>
+            <li><a href="reportes.html" class="active"><span class="link-text">Reportes</span></a></li>
+          </ul>
+        </nav>
+      </aside>
+
+      <div class="content-root">
+        <header class="topbar">
+          <div class="topbar-left"></div>
+
+          <div class="search-wrapper">
+            <form id="search-form">
+              <input type="text" placeholder="Buscar producto..." />
+              <button type="submit">Buscar</button>
+            </form>
+          </div>
+
+          <div class="topbar-right">
+            <div class="user-dropdown">
+              <img src="https://cdn-icons-png.flaticon.com/512/219/219983.png" alt="Usuario">
+              <span class="user-name">Mateo Dominguez</span>
+              <button id="user-menu-btn" type="button">▼</button>
+
+              <ul class="user-menu">
+                <li><a href="perfil.html">Perfil</a></li>
+                <li><a href="ajustes.html">Ajustes</a></li>
+                <li><a href="#" class="logout-link">Cerrar sesión</a></li>
+              </ul>
+            </div>
+          </div>
+        </header>
+
+        <main class="main">
+          <section id="reportes-section">
+            <div class="page-intro">
+              <div>
+                <span class="eyebrow">Inteligencia comercial</span>
+                <h1>Módulo de Reportes</h1>
+                <p>Consulta ventas, clientes, inventario y estados operativos desde una sola vista lista para presentar.</p>
+              </div>
+              <div class="page-intro-note">
+                <span class="status-dot"></span>
+                Actualizable al momento
+              </div>
+            </div>
+
+            <div class="card">
+              <div class="section-actions">
+                <div>
+                  <h2>Filtros del reporte</h2>
+                  <p>Selecciona un rango de fechas para recalcular las métricas y exportar la información clave.</p>
+                </div>
+              </div>
+
+              <div class="filters report-filters">
+                <input type="date" id="reporte-fecha-inicio" />
+                <input type="date" id="reporte-fecha-fin" />
+                <button id="btn-aplicar-reportes" class="btn btn-primary" type="button">Aplicar filtros</button>
+                <button id="btn-exportar-pedidos" class="btn" type="button">Exportar pedidos CSV</button>
+                <button id="btn-exportar-stock" class="btn" type="button">Exportar inventario CSV</button>
+              </div>
+            </div>
+
+            <div class="stats report-stats">
+              <div class="stat">
+                <div class="stat-label">Ingresos Filtrados</div>
+                <h3 id="rep-ingresos">$0.00</h3>
+                <p>Total facturado en el rango seleccionado.</p>
+              </div>
+              <div class="stat">
+                <div class="stat-label">Pedidos Registrados</div>
+                <h3 id="rep-pedidos">0</h3>
+                <p>Cantidad de órdenes consideradas en el reporte.</p>
+              </div>
+              <div class="stat">
+                <div class="stat-label">Ticket Promedio</div>
+                <h3 id="rep-ticket">$0.00</h3>
+                <p>Valor promedio por pedido emitido.</p>
+              </div>
+              <div class="stat">
+                <div class="stat-label">Clientes Activos</div>
+                <h3 id="rep-clientes">0</h3>
+                <p>Clientes con estado activo dentro del sistema.</p>
+              </div>
+            </div>
+
+            <div class="charts-container">
+              <div class="chart-card">
+                <div class="card-head">
+                  <div>
+                    <h3>Pedidos por Estado</h3>
+                    <p>Lectura operativa de la situación actual de las órdenes.</p>
+                  </div>
+                </div>
+                <canvas id="reportesEstadosChart"></canvas>
+              </div>
+
+              <div class="chart-card">
+                <div class="card-head">
+                  <div>
+                    <h3>Inventario por Categoría</h3>
+                    <p>Distribución del valor estimado del stock por categoría.</p>
+                  </div>
+                </div>
+                <canvas id="reportesCategoriasChart"></canvas>
+              </div>
+            </div>
+
+            <div class="report-grid">
+              <div class="card">
+                <div class="section-actions">
+                  <div>
+                    <h2>Resumen Operativo</h2>
+                    <p>Indicadores rápidos para toma de decisiones.</p>
+                  </div>
+                </div>
+                <div class="report-summary-list">
+                  <div class="report-summary-item">
+                    <span>Valor total del inventario</span>
+                    <strong id="rep-inventario">$0.00</strong>
+                  </div>
+                  <div class="report-summary-item">
+                    <span>Productos con stock bajo</span>
+                    <strong id="rep-stock-bajo">0</strong>
+                  </div>
+                  <div class="report-summary-item">
+                    <span>Pedidos entregados</span>
+                    <strong id="rep-entregados">0</strong>
+                  </div>
+                  <div class="report-summary-item">
+                    <span>Pedidos pendientes</span>
+                    <strong id="rep-pendientes">0</strong>
+                  </div>
+                </div>
+              </div>
+
+              <div class="card">
+                <div class="section-actions">
+                  <div>
+                    <h2>Top Categorías</h2>
+                    <p>Categorías con mayor valor y presencia en inventario.</p>
+                  </div>
+                </div>
+                <div id="top-categorias" class="top-list"></div>
+              </div>
+            </div>
+
+            <div class="card">
+              <div class="section-actions">
+                <div>
+                  <h2>Productos con Stock Bajo</h2>
+                  <p>Revisión rápida de productos que necesitan reabastecimiento.</p>
+                </div>
+              </div>
+
+              <table id="reporte-stock-table">
+                <thead>
+                  <tr>
+                    <th>Producto</th>
+                    <th>Categoría</th>
+                    <th>Proveedor</th>
+                    <th>Stock</th>
+                    <th>Precio</th>
+                  </tr>
+                </thead>
+                <tbody></tbody>
+              </table>
+            </div>
+          </section>
+        </main>
+
+        <footer class="site-footer">
+          <span>© 2025 MiFarmacia. Todos los derechos reservados.</span>
+          <ul>
+            <li><a href="#">Política de privacidad</a></li>
+            <li><a href="#">Términos</a></li>
+          </ul>
+        </footer>
+      </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="script.js"></script>
+  </body>
+</html>

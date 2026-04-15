@@ -1,0 +1,143 @@
+﻿<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>MiFarmacia Dashboard</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="app-root">
+
+  <!-- SIDEBAR -->
+  <aside class="sidebar">
+    <div class="brand">
+      <div>
+        <span class="brand-kicker">Panel</span>
+        <img src="assets/branding/logo-transparent.png" alt="Farmacias Gaital" class="brand-logo">
+      </div>
+      <button id="collapse-btn" type="button" aria-label="Colapsar barra lateral">⏴</button>
+    </div>
+
+    <nav class="main-nav">
+      <ul>
+        <li><a href="index.html" class="active"><span class="link-text">Tablero</span></a></li>
+        <li><a href="productos.html"><span class="link-text">Productos</span></a></li>
+        <li><a href="pedidos.html"><span class="link-text">Pedidos</span></a></li>
+        <li><a href="clientes.html"><span class="link-text">Clientes</span></a></li>
+        <li><a href="reportes.html"><span class="link-text">Reportes</span></a></li>
+      </ul>
+    </nav>
+  </aside>
+
+  <!-- CONTENIDO -->
+  <div class="content-root">
+
+  <header class="topbar">
+
+  <div class="topbar-left"></div>
+
+  <div class="search-wrapper">
+    <form id="search-form">
+      <input type="text" placeholder="Buscar producto..." />
+      <button type="submit">Buscar</button>
+    </form>
+  </div>
+
+  <div class="topbar-right">
+    <div class="user-dropdown">
+      <img src="https://cdn-icons-png.flaticon.com/512/219/219983.png">
+      <span class="user-name">Mateo Dominguez</span>
+      <button id="user-menu-btn">▼</button>
+
+      <ul class="user-menu">
+        <li><a href="perfil.html">Perfil</a></li>
+        <li><a href="ajustes.html">Ajustes</a></li>
+        <li><a href="#" class="logout-link">Cerrar sesión</a></li>
+      </ul>
+    </div>
+  </div>
+
+</header>
+
+    <!-- MAIN -->
+    <main class="main">
+
+      <section id="dashboard-section" class="dashboard-shell">
+        <div class="page-intro">
+          <div>
+            <span class="eyebrow">Resumen operativo</span>
+            <h1>Panel General</h1>
+            <p>Control central de inventario, valor de stock y categorías activas.</p>
+          </div>
+          <div class="page-intro-note">
+            <span class="status-dot"></span>
+            Datos en tiempo real
+          </div>
+        </div>
+
+        <div class="stats">
+          <div class="stat">
+            <div class="stat-label">Productos Totales</div>
+            <h3 id="stat-total">0</h3>
+            <p>Catálogo cargado en el sistema</p>
+          </div>
+          <div class="stat">
+            <div class="stat-label">Valor de Inventario</div>
+            <h3 id="stat-inventario">$0.00</h3>
+            <p>Valorización actual del stock</p>
+          </div>
+          <div class="stat">
+            <div class="stat-label">Categorías</div>
+            <h3 id="stat-categorias">0</h3>
+            <p>Segmentos activos del inventario</p>
+          </div>
+        </div>
+
+        <div class="charts-container">
+          <div class="chart-card">
+            <div class="card-head">
+              <div>
+                <h3>Productos por Categoría</h3>
+                <p>Distribución de referencias por línea de producto.</p>
+              </div>
+            </div>
+            <canvas id="barChart"></canvas>
+          </div>
+
+          <div class="chart-card">
+            <div class="card-head">
+              <div>
+                <h3>Distribución de Stock</h3>
+                <p>Participación de existencias por proveedor cargado.</p>
+              </div>
+            </div>
+            <canvas id="pieChart"></canvas>
+          </div>
+        </div>
+      </section>
+
+    </main>
+
+    <!-- FOOTER -->
+    <footer class="site-footer">
+      <span>© 2025 MiFarmacia. Todos los derechos reservados.</span>
+      <ul>
+        <li><a href="#">Política de privacidad</a></li>
+        <li><a href="#">Términos</a></li>
+      </ul>
+    </footer>
+
+  </div>
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+<script src="script.js"></script>
+
+</body>
+</html>
+

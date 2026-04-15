@@ -1,0 +1,410 @@
+﻿<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>MiFarmacia | Tienda</title>
+    <link rel="stylesheet" href="style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700&family=Work+Sans:wght@400;600;700&display=swap" rel="stylesheet" />
+  </head>
+  <body>
+    <div class="announcement-bar">
+      <div class="container announcement-inner">
+        <div>Compra segura, atención farmacéutica y entregas el mismo día.</div>
+        <div class="announcement-meta">
+          <span>Envío gratis desde $25</span>
+          <span>Recetario por WhatsApp</span>
+          <span>Soporte 7 días</span>
+        </div>
+      </div>
+    </div>
+
+    <header class="retail-header">
+      <div class="retail-top container">
+        <a class="brand" href="index.html">
+          <span class="brand-mark"><img src="../assets/branding/logo-transparent.png" alt="Farmacias Gaital" class="brand-logo-store"></span>
+          <span class="brand-note">Cuidado profesional, rápido y confiable</span>
+        </a>
+        <div class="search-wrap">
+          <div class="search-bar">
+            <input type="text" placeholder="¿Qué estás buscando?" />
+            <button class="search-btn">Buscar</button>
+          </div>
+          <div class="search-suggest" hidden></div>
+        </div>
+        <div class="retail-icons">
+          <div class="retail-help">
+            <span>Delivery Recetario</span>
+            <strong>(507) 6815-1053</strong>
+          </div>
+          <a class="icon-link" href="login.html" data-store-auth>
+            <svg viewBox="0 0 24 24" fill="none" stroke-width="2">
+              <circle cx="12" cy="8" r="4"></circle>
+              <path d="M4 20c1.8-3.5 5-5 8-5s6.2 1.5 8 5"></path>
+            </svg>
+            Ingresar
+          </a>
+          <a class="icon-link" href="carrito.html">
+            <svg viewBox="0 0 24 24" fill="none" stroke-width="2">
+              <circle cx="9" cy="20" r="1.8"></circle>
+              <circle cx="17" cy="20" r="1.8"></circle>
+              <path d="M3 4h2l2.6 11.5a1 1 0 0 0 1 .8h8.8a1 1 0 0 0 1-.7L21 7H6"></path>
+            </svg>
+            Carrito (<span class="cart-badge" data-cart-badge>0</span>)
+          </a>
+        </div>
+      </div>
+      <div class="retail-subnav">
+        <div class="container subnav-links">
+          <a href="catalogo.html">Departamentos</a>
+          <a href="catalogo.html">Catálogo</a>
+          <a href="servicios.html">Servicios</a>
+          <a href="contacto.html">Atención</a>
+          <a href="mis-pedidos.html">Mis pedidos</a>
+        </div>
+      </div>
+    </header>
+
+    <section class="hero">
+      <div class="container">
+        <div class="hero-slider promo-slider" data-hero-slider>
+          <button class="hero-nav prev" type="button" data-hero-prev aria-label="Slide anterior">‹</button>
+          <button class="hero-nav next" type="button" data-hero-next aria-label="Siguiente slide">›</button>
+
+          <article class="hero-slide active">
+            <div class="promo-frame">
+              <img class="promo-image" src="assets/promo-1.svg" alt="Promo cuidado dental" />
+              <div class="promo-overlay">
+                <span class="promo-pill">Promoción</span>
+                <h2>Higiene Oral Premium</h2>
+                <p>Hasta 25% en cuidado dental seleccionado.</p>
+                <a class="btn" href="catalogo.html?buscar=dental">Ver oferta</a>
+              </div>
+            </div>
+          </article>
+
+          <article class="hero-slide">
+            <div class="promo-frame">
+              <img class="promo-image" src="assets/promo-2.svg" alt="Promo vitaminas y energia" />
+              <div class="promo-overlay">
+                <span class="promo-pill">Novedades</span>
+                <h2>Vitaminas y Energía</h2>
+                <p>Combos para fortalecer defensas y rendimiento diario.</p>
+                <a class="btn" href="catalogo.html?buscar=vitaminas">Comprar ahora</a>
+              </div>
+            </div>
+          </article>
+
+          <article class="hero-slide">
+            <div class="promo-frame">
+              <img class="promo-image" src="assets/promo-3.svg" alt="Promo recetario y delivery" />
+              <div class="promo-overlay">
+                <span class="promo-pill">Recetario</span>
+                <h2>Delivery Rápido</h2>
+                <p>Envío en el día para medicamentos y cuidado personal.</p>
+                <a class="btn" href="contacto.html">Pedir por receta</a>
+              </div>
+            </div>
+          </article>
+
+          <div class="hero-dots" data-hero-dots></div>
+        </div>
+
+        <div class="hero-premium-grid">
+          <div class="hero-metrics">
+            <div class="eyebrow">Confianza clínica</div>
+            <div class="metric-strip">
+              <div class="metric-chip">
+                <strong>24/7</strong>
+                <span>Atención y seguimiento</span>
+              </div>
+              <div class="metric-chip">
+                <strong>100%</strong>
+                <span>Productos verificados</span>
+              </div>
+              <div class="metric-chip">
+                <strong>+500</strong>
+                <span>Clientes recurrentes</span>
+              </div>
+            </div>
+          </div>
+
+          <aside class="hero-panel">
+            <div class="eyebrow">Servicio premium</div>
+            <h3>Tu farmacia digital con respaldo real</h3>
+            <p>Centralizamos catálogo, seguimiento de pedidos, recetario y atención humana para que la experiencia se sienta confiable desde el primer clic.</p>
+            <ul class="hero-checklist">
+              <li>Entrega rápida en zonas cercanas</li>
+              <li>Seguimiento de pedidos en línea</li>
+              <li>Atención por WhatsApp y teléfono</li>
+            </ul>
+          </aside>
+        </div>
+      </div>
+    </section>
+
+    <section class="section section-tight">
+      <div class="container">
+        <div class="slider-head">
+          <h2 class="section-title">Ofertas relámpago</h2>
+          <div class="slider-controls">
+            <button class="btn btn-outline" type="button" data-scroll-left>‹</button>
+            <button class="btn btn-outline" type="button" data-scroll-right>›</button>
+          </div>
+        </div>
+        <div class="deal-slider" data-deal-slider>
+          <article class="deal-card">
+            <h3>Vitaminas</h3>
+            <p class="small">Hasta 20% de descuento en marcas seleccionadas.</p>
+          </article>
+          <article class="deal-card">
+            <h3>Dolor y fiebre</h3>
+            <p class="small">Combos para casa y oficina con envío rápido.</p>
+          </article>
+          <article class="deal-card">
+            <h3>Cuidado respiratorio</h3>
+            <p class="small">Jarabes y suplementos para temporada.</p>
+          </article>
+          <article class="deal-card">
+            <h3>Higiene</h3>
+            <p class="small">Línea de desinfección personal y familiar.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section section-tight">
+      <div class="container">
+        <div class="promo-strip-grid">
+          <article class="promo-strip-card promo-strip-card--mint">
+            <span class="eyebrow">Compra rápida</span>
+            <h3>Sube tu receta y recibe confirmación en minutos</h3>
+            <p class="small">Atendemos pedidos formulados con seguimiento por WhatsApp y despacho programado.</p>
+            <a class="btn btn-outline" href="contacto.html">Enviar receta</a>
+          </article>
+          <article class="promo-strip-card promo-strip-card--rose">
+            <span class="eyebrow">Bienestar diario</span>
+            <h3>Arma tu botiquín familiar con productos esenciales</h3>
+            <p class="small">Analgésicos, vitaminas, higiene y respiratorio con entrega confiable.</p>
+            <a class="btn" href="catalogo.html">Ver catálogo</a>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section section-tight">
+      <div class="container">
+        <div class="section-header">
+          <div class="section-copy">
+            <span class="eyebrow">Compra por necesidad</span>
+            <h2 class="section-title">Categorías más buscadas</h2>
+            <p class="small">Accesos rápidos a las líneas con mayor rotación y demanda clínica.</p>
+          </div>
+        </div>
+        <div class="category-showcase">
+          <article class="category-card">
+            <strong>Analgésicos</strong>
+            <p class="small">Dolor, fiebre y alivio inmediato para uso diario.</p>
+          </article>
+          <article class="category-card">
+            <strong>Vitaminas</strong>
+            <p class="small">Soporte inmune, energía y bienestar integral.</p>
+          </article>
+          <article class="category-card">
+            <strong>Respiratorio</strong>
+            <p class="small">Soluciones para tos, congestión y temporada gripal.</p>
+          </article>
+          <article class="category-card">
+            <strong>Dermatología</strong>
+            <p class="small">Protección solar y cuidado avanzado de la piel.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section section-tight">
+      <div class="container">
+        <div class="section-header">
+          <div class="section-copy">
+            <span class="eyebrow">Compra por necesidad</span>
+            <h2 class="section-title">Soluciones para cada momento</h2>
+            <p class="small">Una tienda más real guía al cliente según lo que necesita resolver.</p>
+          </div>
+        </div>
+        <div class="needs-grid">
+          <article class="needs-card">
+            <span class="needs-icon">01</span>
+            <h3>Dolor y fiebre</h3>
+            <p class="small">Medicamentos de alta rotación para alivio diario y botiquín del hogar.</p>
+          </article>
+          <article class="needs-card">
+            <span class="needs-icon">02</span>
+            <h3>Defensas y energía</h3>
+            <p class="small">Vitaminas, suplementos y fórmulas para bienestar integral.</p>
+          </article>
+          <article class="needs-card">
+            <span class="needs-icon">03</span>
+            <h3>Cuidado respiratorio</h3>
+            <p class="small">Jarabes, descongestionantes y apoyo para temporada gripal.</p>
+          </article>
+          <article class="needs-card">
+            <span class="needs-icon">04</span>
+            <h3>Piel y protección</h3>
+            <p class="small">Protección solar, limpieza y tratamientos dermatológicos.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="container">
+        <div class="section-header">
+          <div class="section-copy">
+            <span class="eyebrow">Selección profesional</span>
+            <h2 class="section-title">Productos destacados</h2>
+            <p class="small">Selección de alta rotación y recomendados por nuestros farmacéuticos.</p>
+          </div>
+        </div>
+        <div class="grid products" data-products></div>
+      </div>
+    </section>
+
+    <section class="section section-tight">
+      <div class="container">
+        <div class="brand-wall">
+          <span>Laboratorios Genéricos</span>
+          <span>Salud Natural</span>
+          <span>VitalCare</span>
+          <span>Dermaclinic</span>
+          <span>Respira+</span>
+        </div>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="container">
+        <div class="section-header">
+          <div class="section-copy">
+            <span class="eyebrow">Diferenciadores</span>
+            <h2 class="section-title">Por qué elegirnos</h2>
+          </div>
+        </div>
+        <div class="trust-band">
+          <div class="trust-item">
+            <h3>Entrega rápida</h3>
+            <p class="small">Misma tarde en zonas cercanas y seguimiento en tiempo real.</p>
+          </div>
+          <div class="trust-item">
+            <h3>Productos certificados</h3>
+            <p class="small">Trabajamos con laboratorios confiables y stock controlado.</p>
+          </div>
+          <div class="trust-item">
+            <h3>Atención humana</h3>
+            <p class="small">Asesoría personalizada para cada tratamiento.</p>
+          </div>
+          <div class="trust-item">
+            <h3>Compra protegida</h3>
+            <p class="small">Proceso simple, seguro y con confirmación de pedido.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="container">
+        <div class="section-header">
+          <div class="section-copy">
+            <span class="eyebrow">Experiencia de clientes</span>
+            <h2 class="section-title">Comentarios de clientes</h2>
+          </div>
+        </div>
+        <div class="grid products testimonial-grid" style="grid-template-columns: repeat(3, minmax(0, 1fr));">
+          <div class="card">
+            <h3>“Muy rápida la entrega”</h3>
+            <p class="small">Llegó el mismo día y el empaque en perfecto estado.</p>
+          </div>
+          <div class="card">
+            <h3>“Excelente asesoría”</h3>
+            <p class="small">Me explicaron cómo tomar el tratamiento correctamente.</p>
+          </div>
+          <div class="card">
+            <h3>“Precios justos”</h3>
+            <p class="small">Buen precio y promociones en vitaminas.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="container">
+        <div class="cta-banner">
+          <div>
+            <span class="eyebrow">Atención farmacéutica</span>
+            <h2 class="section-title">Haz tu pedido con el respaldo de una farmacia real</h2>
+            <p class="small">Compra desde el catálogo, consulta por receta y recibe seguimiento del estado de tu orden sin complicaciones.</p>
+          </div>
+          <div class="cta-actions">
+            <a class="btn" href="catalogo.html">Comprar ahora</a>
+            <a class="btn btn-outline" href="mis-pedidos.html">Seguir mi pedido</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <footer class="footer">
+      <div class="container footer-panel">
+        <div class="footer-top">
+          <div class="footer-brand">
+            <img src="../assets/branding/logo-transparent.png" alt="Farmacias Gaital" class="footer-brand-logo">
+            <p>Tu farmacia digital con atenci&oacute;n cercana, compra segura y acompa&ntilde;amiento durante todo el proceso.</p>
+          </div>
+
+          <div>
+            <h3 class="footer-title">Cont&aacute;ctanos</h3>
+            <ul class="footer-contact">
+              <li>Ll&aacute;manos: (507) 6815-1053</li>
+              <li>Email: clientes@farmaciasgaital.com</li>
+              <li>WhatsApp: atenci&oacute;n y recetario</li>
+            </ul>
+          </div>
+
+          <div>
+            <h3 class="footer-title">Servicios</h3>
+            <ul class="footer-list">
+              <li><a href="servicios.html">Servicios para el cliente</a></li>
+              <li><a href="contacto.html">Centro de ayuda</a></li>
+              <li><a href="contacto.html">Pol&iacute;tica de privacidad</a></li>
+              <li><a href="mis-pedidos.html">Seguimiento de pedidos</a></li>
+            </ul>
+          </div>
+
+          <div>
+            <h3 class="footer-title">Cuenta y sitio</h3>
+            <ul class="footer-list">
+              <li><a href="login.html">Ingresar</a></li>
+              <li><a href="catalogo.html">Cat&aacute;logo</a></li>
+              <li><a href="contacto.html">Sucursales y horarios</a></li>
+              <li><a href="contacto.html">Trabaja con nosotros</a></li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="footer-bottom">
+          <strong>Todos los derechos reservados Farmacias Gaital &copy; 2026</strong>
+          <div class="footer-apps">
+            <span class="footer-app-badge">Recetario digital</span>
+            <span class="footer-app-badge">Entrega el mismo dia</span>
+            <span class="footer-app-badge">Atencion por WhatsApp</span>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    <script src="script.js"></script>
+  </body>
+</html>
+
+
+

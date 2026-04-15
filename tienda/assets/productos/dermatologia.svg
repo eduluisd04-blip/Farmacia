@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="800" height="500" viewBox="0 0 800 500">
+  <defs><linearGradient id="d" x1="0" y1="0" x2="1" y2="1"><stop offset="0%" stop-color="#fef3c7"/><stop offset="100%" stop-color="#fde68a"/></linearGradient></defs>
+  <rect width="800" height="500" fill="url(#d)"/>
+  <rect x="300" y="110" width="200" height="280" rx="26" fill="#fff"/>
+  <rect x="340" y="145" width="120" height="180" rx="12" fill="#fbbf24"/>
+  <circle cx="400" cy="236" r="38" fill="#fff3c4"/>
+  <text x="400" y="250" font-family="Arial" font-size="38" text-anchor="middle" fill="#92400e" font-weight="700">SPF</text>
+  <text x="400" y="430" font-family="Arial" font-size="38" text-anchor="middle" fill="#92400e" font-weight="700">DERMATOLOGIA</text>
+</svg>
